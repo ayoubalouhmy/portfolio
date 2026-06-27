@@ -8,7 +8,11 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: '*',
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 // Configure Nodemailer Transporter
 const transporter = nodemailer.createTransport({
@@ -54,12 +58,11 @@ app.post('/send-email', async (req, res) => {
   }
 });
 
-// Remplace app.listen par ceci :
-if (process.env.NODE_VERSION) {
+// Configuration pour le déploiement (Vercel vs Local)
+if (process.env.VERCEL) {
   module.exports = app;
 } else {
   app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
   });
 }
-
