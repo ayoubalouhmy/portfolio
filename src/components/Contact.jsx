@@ -19,7 +19,8 @@ export default function Contact() {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/send-email', form);
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      const response = await axios.post(`${apiUrl}/send-email`, form);
 
       if (response.data.success) {
         setStatus('success')
