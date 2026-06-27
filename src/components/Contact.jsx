@@ -19,7 +19,9 @@ export default function Contact() {
     }
 
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      // TEST TEMPORAIRE à la ligne 22 :
+      const apiUrl = 'https://portfolio-backend-beige-alpha.vercel.app';
+
       const response = await axios.post(`${apiUrl}/send-email`, form);
 
       if (response.data.success) {

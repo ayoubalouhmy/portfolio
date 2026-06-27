@@ -54,6 +54,12 @@ app.post('/send-email', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Backend server en cours d'exécution sur http://localhost:${PORT}`);
-});
+// Remplace app.listen par ceci :
+if (process.env.NODE_VERSION) {
+  module.exports = app;
+} else {
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+}
+
