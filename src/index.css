@@ -298,12 +298,11 @@ html{
 /* */
 .hr-contact{
     background-color: var(--primary-color);
-width: 5%;
-height: 3px;
-border: none;
-margin-top: 0;
-margin-left: calc(49.5% - 75px);
-
+    width: 5%;
+    height: 3px;
+    border: none;
+    margin-top: 0;
+    margin-left: calc(49.5% - 75px);
 }
 .hr-skils{
     background-color: var(--primary-color);
@@ -312,7 +311,20 @@ margin-left: calc(49.5% - 75px);
     border: none;
     margin-top: 0;
     margin-left: calc(43% - 75px);
+}
 
+.btn-project {
+    border: 1.5px solid var(--primary-color);
+    color: var(--primary-color);
+    background-color: transparent;
+    transition: 0.4s ease;
+    border-radius: 25px;
+    font-weight: 500;
+}
+
+.btn-project:hover {
+    background-color: var(--primary-color);
+    color: white;
 }
 .text input,textarea{
     width: 70%;
