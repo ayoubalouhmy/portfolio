@@ -2,10 +2,14 @@ const frontendSkills = [
   { icon: 'fa-brands fa-html5', label: 'Html' },
   { icon: 'fa-brands fa-css3-alt', label: 'Css' },
   { icon: 'fa-brands fa-js', label: 'JavaScript' },
+  { icon: 'fa-brands fa-react', label: 'React' },
   { icon: 'fa-brands fa-bootstrap', label: 'Bootstrap' },
-  { icon: 'fa-brands fa-python', label: 'Python' },
   { icon: 'fa-brands fa-php', label: 'Php' },
+  { icon: 'fa-brands fa-laravel', label: 'Laravel' },
+  { icon: 'fa-brands fa-node-js', label: 'Express' },
   { icon: 'fa-solid fa-database', label: 'Mysql' },
+  { icon: 'fa-solid fa-leaf', label: 'MongoDB' },
+  { icon: 'fa-brands fa-python', label: 'Python' },
 ]
 
 const tools = [
